@@ -66,4 +66,8 @@ public class Funcionario {
 		}
 		return pl;
 	}
+	public String toString() {
+		String texto = "Nome: " + this.nome + "\t" + "Cpf: " + this.cpf + "\t" + "Salario base: " + this.salarioBase;
+		return texto;
+	}
 }
