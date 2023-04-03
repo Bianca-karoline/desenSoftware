@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Sistema {
+    public static void main(String[] args){
+        Scanner sc  = new Scanner(System.in);
+        ConjuntoInteiro novo = new ConjuntoInteiro();
+        ConjuntoInteiro inteiro = new ConjuntoInteiro();
+        novo.newNum(sc.nextInt());
+        sc.reset();
+        novo.newNum(sc.nextInt());
+        //novo.removeNum(0);
+        inteiro.newNum(sc.nextInt());
+        sc.reset();
+        inteiro.newNum(sc.nextInt());
+        sc.reset();
+        
+        /*for(int i = 0; i <inteiro.size();i++){
+            novo.uniao(inteiro.getElementos(i));
+        }   */
+
+        /*for(int i = 0; i <inteiro.size();i++){
+            novo.intersecao(inteiro.getElementos(i));
+        }  
+        System.out.println(novo.intersecao());*/
+        for(int i = 0; i <inteiro.size();i++){
+            novo.diferenca(inteiro.getElementos(i));
+        }  
+        //System.out.println(novo.diferenca());
+        System.out.println(novo.toString());
+
+        sc.close();
+    }
+}
