@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Principal {
+    public static void main(String[] args) {
+        Scanner sc =new Scanner(System.in);
+        Door porta = new Door();
+        int option;
+        porta.open();
+        porta.paint("vermelho");
+        porta.setDepth(1);
+        porta.setHeight(2.0);
+        porta.setWidth(0.8);
+        if(porta.isOpen() == true ) System.out.println("True");
+
+        House casa = new House();
+        casa.paint("Cinza");
+
+        for(int i = 0; i<3;i++){
+            casa.portaAdd(porta);
+            System.out.println("Digite 1 para abrir a porta e 2 para fechar "+ i);
+            option = sc.nextInt();
+            if(option == 1){
+                porta.open();
+                casa.portaAdd(porta);
+            }else{
+                porta.close();
+                casa.portaAdd(porta);
+            }
+        }
+        
+        //System.out.println(casa.toString());
+        System.out.println(casa.doorsIsOpen());
+        sc.close();
+    }
+}
