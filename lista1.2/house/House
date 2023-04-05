@@ -1,38 +1,40 @@
-import java.util.ArrayList;
+package atividades;
+
 public class House {
     private String color;
-    private ArrayList<Door> porta = new ArrayList<>();
+    Door porta1 = new Door();
+    Door porta2 = new Door();
+    Door porta3 = new Door();
     public void paint(String color) {
         this.color = color;
     }
-    public String sla(){
+    public String houseColor(){
         return color;
     }
-    public void open(int p){
-        porta.get(p).open();
+    public void addPortas(Door a, Door b, Door c) {
+    	this.porta1 = a;
+    	this.porta2 = b;
+    	this.porta3 = c;
     }
-    public void close(int p){
-        porta.get(p).close();
-    }
-    public void portaAdd(Door a){
-        porta.add(a);
-    }
+    
     public int doorsIsOpen(){
         int q=0;
-        int i=0;
-        for(i=0;i<porta.size();i++){
-            System.out.println(porta.get(i).isOpen());
-            if(porta.get(i).isOpen() == true){
-                q++;
-            }
+        if(porta1.isOpen() == true) {
+        	q ++;
+        }
+        if(porta2.isOpen() == true) {
+        	q ++;
+        }
+        if(porta3.isOpen() == true) {
+        	q ++;
         }
         return q;
     }
-    public String toString(){
-        String texto = new String();
-        for(Door lista : porta){
-            texto = texto + "\t" + lista.getDoor();
-        }
-        return texto;
+    public String toString() {
+    	return "Cor da casa: " + this.color +
+    			"\nPortas: \n" + this.porta1.getDoor() + "\n" +
+    			this.porta2.getDoor() + "\n" +
+    			this.porta3.getDoor();
     }
+    
 }
