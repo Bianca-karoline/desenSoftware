@@ -1,10 +1,21 @@
+package atividades;
+
 public class Door {
     private String color;
     private double width;
     private double height;
     private double depth;
     private boolean open = false;
-
+    
+    public Door(String a, double w, double h, double d) {
+    	this.color = a;
+    	this.width = w;
+    	this.height = h;
+    	this.depth = d;
+    }
+    public Door() {
+    	
+    }
     public void open() {
         this.open = true;
     }
