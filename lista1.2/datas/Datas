@@ -34,6 +34,10 @@ public class Datas{
         }else{
             this.mes++;
             this.dia = 1;
+            if(this.mes == 13){
+                this.mes = 1;
+                this.ano++;
+            }
         }
     }
     public Datas(){
