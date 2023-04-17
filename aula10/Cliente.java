@@ -33,8 +33,11 @@ public class Cliente {
 	public void setConta(Conta a) {
 		listaConta.add(a);
 	}
-	public String getConta(int i) {
-		String texto = listaConta.get(i).toString();
+	public String getConta() {
+		String texto = "";
+		for(Conta a: listaConta) {
+			texto += a.toString() + "\n";
+		}
 		return texto;
 	}
 	public String toString() {

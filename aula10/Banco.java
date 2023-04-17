@@ -63,10 +63,7 @@ public class Banco {
 					break;
 				case 3:
 					for(Cliente item : lista) {
-						System.out.println(item);
-						for(Conta cont: item.getConta()) {
-							System.out.println(cont.toString());
-						}
+						System.out.println(item.getConta());
 					}
 					break;
 				case 4: 

@@ -1,4 +1,4 @@
-package polimorfismo;
+package aula13;
 
 public class Anfibio extends Animal {
 	public Anfibio(String nome, int patas, double velocidade, int localizacao) {

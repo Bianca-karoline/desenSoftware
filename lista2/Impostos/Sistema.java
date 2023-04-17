@@ -9,7 +9,7 @@ public class Sistema {
 				+ "2 - consulta de imposto a pagar no mês (com base no mês e no ano das vendas).\n"
 				+ "0 - Sair.";
 		int option;
-		Vendas vendas = new Vendas();
+		Vendas teste = new Vendas();
 		do {
 			System.out.println(menu);
 			option = sc.nextInt();
@@ -17,11 +17,13 @@ public class Sistema {
 			switch(option) {
 			case 1:
 				System.out.println("Digite do valor da venda: ");
-				vendas.setVendas(sc.nextDouble());
+				teste.setVendas(sc.nextDouble());
+				
 				sc.reset();
 				break;
 			case 2:
-				System.out.println(vendas.getExcesso());
+					System.out.println(teste.getExcesso());
+				
 				break;
 			case 0:
 				System.out.println("Encerrando o sistema...");
