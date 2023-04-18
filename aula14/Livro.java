@@ -3,16 +3,17 @@ package aula14;
 public class Livro {
 	private String titulo;
 	private String autor;
-	private String numero;
+	private int numero;
 	private boolean disponivel;
 	
 	public Livro() {
 		
 	}
-	public Livro(String titulo, String numero, String autor) {
+	public Livro(String titulo, String autor, int numero) {
 		this.titulo = titulo;
-		this.numero = numero;
 		this.autor = autor;
+		this.numero = numero;
+
 	}
 	
 	public String getTitulo() {
@@ -27,10 +28,10 @@ public class Livro {
 	public void setAutor(String autor) {
 		this.autor = autor;
 	}
-	public String getNumero() {
+	public int getNumero() {
 		return numero;
 	}
-	public void setNumero(String numero) {
+	public void setNumero(int numero) {
 		this.numero = numero;
 	}
 	public boolean isDisponivel() {

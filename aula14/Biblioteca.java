@@ -8,13 +8,16 @@ public class Biblioteca {
 	public ArrayList<Livro> getLivros() {
 		return listaLivros;
 	}
-
+	
 	public void setLivros(ArrayList<Livro> livros) {
 		this.listaLivros = livros;
 		System.out.println("Livro adicionado");
 	}
 	
-	public void addLivro(Livro livro) {
+	public void addLivro(String t, String a) {
+		int q = listaLivros.size();
+		Livro livro = new Livro(t,a,q);
+		livro.setDisponivel(true);
 		listaLivros.add(livro);
 	}
 	public void removeLivro(int i) {
@@ -22,7 +25,13 @@ public class Biblioteca {
 		System.out.println("Livro removido");
 	}
 	public void emprestaLivro(String titulo) {
-		
+		for(Livro a:listaLivros){
+			if(a.getTitulo().equals(titulo)){
+				System.out.println("Livro emprestado com sucesso");
+				a.setDisponivel(false);
+				break;
+			}
+		}
 	}
 	public int qtdLivros() {
 		int qtd = 0;

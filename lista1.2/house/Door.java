@@ -1,4 +1,4 @@
-package atividades;
+package house;
 
 public class Door {
     private String color;
